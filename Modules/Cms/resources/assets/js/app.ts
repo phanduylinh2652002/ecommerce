@@ -3,8 +3,13 @@ import { createInertiaApp } from '@inertiajs/vue3'
 import Layout from '@/Layouts/index.vue'
 import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
+import StyleClass from 'primevue/styleclass'
+import '../sass/app.scss';
+import 'primeicons/primeicons.css';
 
 import Button from "primevue/button"
+import Toast from 'primevue/toast';
+import SelectButton from "primevue/selectbutton";
 
 createInertiaApp({
     resolve: name => {
@@ -27,6 +32,9 @@ createInertiaApp({
                 }
             })
             .component('Button', Button)
+            .component('Toast', Toast)
+            .component('SelectButton', SelectButton)
+            .directive('styleclass', StyleClass)
             .mount(el)
     },
 })
