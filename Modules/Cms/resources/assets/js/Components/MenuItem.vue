@@ -22,12 +22,9 @@
 <script setup>
 import { useLayout } from '../Layouts/composables/layout.ts';
 import { onBeforeMount, ref, watch } from 'vue';
-import {useRoute} from "vue-router";
-
+import { useRoute } from "vue-router";
 
 const route = useRoute()
-
-console.log(route)
 
 const { layoutState, setActiveMenuItem, toggleMenu } = useLayout();
 
