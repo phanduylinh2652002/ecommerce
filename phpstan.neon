@@ -1,0 +1,17 @@
+parameters:
+    level: 5
+    paths:
+        - .
+    excludePaths:
+        - tests/*
+        - vendor/*
+        - public/*
+        - storage/*
+        - packages/*
+        - routes/*
+
+    ignoreErrors:
+        - '#Call to an undefined method#'
+        - '#Match expression does not handle remaining value: string#'
+
+    reportUnmatchedIgnoredErrors: false
